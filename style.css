@@ -1,0 +1,91 @@
+/* تنسيق الصفحة */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* تنسيق عنوان الصفحة */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* شبكة المنتجات */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+/* تنسيق كل منتج */
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+/* صورة المنتج */
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* اسم المنتج */
+.product-name {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* السعر */
+.product-price {
+    font-size: 1.5rem;
+    color: #4CAF50;
+    margin: 10px 0;
+}
+
+/* زر الشراء */
+.product button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product button:hover {
+    background-color: #45a049;
+}
+
+/* تنسيق للهواتف */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
